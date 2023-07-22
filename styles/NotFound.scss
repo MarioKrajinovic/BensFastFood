@@ -1,0 +1,23 @@
+#not-found{
+    @extend #home;
+    min-height: 80vh;
+    background-color: $bg-color;
+    justify-content: center;
+    color: $textBlack;
+    div{
+        width: 80%;
+        p{
+            @include p();
+            margin: 25px 0px;
+        }
+        li{
+            @include p();
+            margin-bottom: 5px;
+            margin-left: 40px;
+        }
+        a{
+            color: $h1-color;
+            text-decoration: none;
+        }
+    }
+}

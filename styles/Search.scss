@@ -1,0 +1,48 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+#search{
+    min-height: 55vh;
+    margin-top: 21vh;
+    background-color: $bg-color;
+    @include Flex("", center, center);
+    padding-right: 55px;
+    @media screen and(max-width: 1024px){
+        min-height: 70vh;
+        @media screen and(max-width: 768px){
+            min-height: 60vh;
+            @media screen and(max-width: 425px){
+                min-height: 40vh;
+                padding-right: 40px;
+            }
+        }
+    }
+    button{
+        width: 50px;
+        height: 11vh;
+        font-size: 30px;
+        background-color: white;
+        border: none;
+        position: relative;
+        left: 55px;
+        @media screen and(max-width: 425px){
+            height: 9vh;
+            font-size: 25px;
+            left: 50px;
+        }
+    }
+    input{
+        @include Input(80%, 12vh);
+        background-color: white;
+        font-size: 25px;
+        padding-left: 55px;
+        &::placeholder{
+            color: $bg-color;
+        }
+        @media screen and(max-width: 1024px){
+            height: 14vh;
+            @media screen and(max-width: 425px){
+                @include Input(100%, 10vh);
+                font-size: 23px;
+            }
+        }
+    }
+}

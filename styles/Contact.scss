@@ -1,0 +1,96 @@
+#contact{
+    min-height: 100vh;
+    background-image: url("../images/contact.jpg");
+    color: $textBlack;
+    .contact-background{
+        padding: 27vh 0px 50px 0px;
+        background-color: rgba(255, 255, 255, 0.9);
+        @include Flex(column, "", center);
+        @media screen and(max-width: 1024px){
+            padding: 47vh 0px 50px 0px;
+            @media screen and(max-width: 768px){
+                padding: 40vh 0px 50px 0px;
+                @media screen and(max-width: 425px){
+                    padding: 18vh 0px 50px 0px;
+                }
+            }
+        }
+        .contact{
+            @include Flex(column, "", center);
+            text-align: center;
+            @media screen and(max-width: 425px){
+                padding: 0px 30px;
+            }
+            h1{
+                @include h1();
+                margin-bottom: 40px;
+            }
+            p{
+                @include p();
+                margin-bottom: 40px;
+            }
+        }
+        form{
+            width: 84%;
+            @media screen and(max-width: 425px){
+                width: 86%;
+            }
+            p{
+                @include p();
+                margin: 0px 0px 15px 0px;
+            }
+            small{
+                @include Text(400, 16px, $font-branton);
+                margin-left: 5px;
+            }
+            label{
+                @include Text(400, 16px, $font-branton);
+                margin-bottom: 10px;
+            }
+            input{
+                margin-bottom: 30px;
+            }
+            .name-form{
+                @include Flex("", space-between, "");
+                div{
+                    @include Flex(column, "", "");
+                    width: 49%;
+                    input{
+                        @include Input(100%, 47px);
+                        background-color: white;
+                        @media screen and(max-width: 425px){
+                            height: 43px;
+                        }
+                    }
+                }
+            }
+            .email, .subject, .message{
+                @include Flex(column, "", "");
+                input{
+                    @include Input(100%, 47px);
+                    background-color: white;
+                    @media screen and(max-width: 425px){
+                        height: 40px;
+                    }
+                }
+            }
+            .message{
+                textarea{
+                    height: 100px;
+                }
+            }
+            button{
+                @include button(20px, 30px, 30px, 16px);
+                border: none;
+                font-family: $font-vinyl;
+                margin-top: 20px;
+                &:hover{
+                    background-color: rgba(204, 40, 51, 0.8);
+                }
+                @media screen and(max-width: 768px){
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

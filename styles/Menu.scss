@@ -1,0 +1,123 @@
+#menu{
+    color: $textBlack;
+    background-image: url("../images/menu.jpg");
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    .menu-background{
+        background-color: rgba(231, 230, 230, 0.9);
+        padding-top: 25vh;
+        padding-bottom: 5vh;
+        @include Flex(column, "", center);
+        @media screen and(max-width: 1024px){
+            padding-top: 45vh;
+            @media screen and(max-width: 768px){
+                padding-top: 37vh;
+                @media screen and(max-width: 425px){
+                    padding-top: 20vh;
+                }
+            }
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            width: 85%;
+            flex-wrap: wrap;
+            a{
+                @include NavLink(16px);
+                @include Text(400, 16px, $font-vinyl);
+                letter-spacing: -1px;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                margin-right: 10px
+            }
+        }
+        .signature-bowls, .ounce-sides, .smoothies, .sweet-things{
+            @include Flex(column, "", center);
+            text-align: center;
+            div{
+                width: 84%;
+                @include Flex(column, "", center);
+                @media screen and(max-width: 425px){
+                    width: 86%;
+                }
+            }
+            h1{
+                @include h2();
+                margin: 60px 0px;
+            }
+            h2{
+                @include h3();
+                line-height: 36px;
+                margin-bottom: 40px;
+                @media screen and(max-width: 1024px){
+                    line-height: 36px;
+                    @media screen and(max-width: 768px){
+                        line-height: 30px;
+                        @media screen and(max-width: 425px){
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+            h3{
+                @include h3();
+                margin-bottom: 15px;
+            }
+            p{
+                @include p();
+                margin-bottom: 40px;
+            }
+            a{
+                @include button(20px, 30px, 30px, 16px);
+                border: none;
+                font-family: $font-vinyl;
+                margin: 50px 0px;
+                &:hover{
+                    background-color: rgba(204, 40, 51, 0.8);
+                }
+                @media screen and(max-width: 768px){
+                    font-size: 16px;
+                }
+            }
+        }
+        .ounce-sides, .smoothies, .sweet-things{
+            width: 84%;
+            @media screen and(max-width: 425px){
+                width: 86%;
+            }
+        }
+        .allergies{
+            border-top: 2px solid #cc2833;
+            width: 100%;
+            padding: 40px 0px;
+            width: 84%;
+            @media screen and(max-width: 425px){
+                width: 86%;
+            }
+            .title{
+                font-size: 24px;
+                line-height: 44px;
+                @media screen and(max-width: 1024px){
+                    font-size: 22px;
+                    line-height: 40px;
+                    @media screen and(max-width: 768px){
+                        font-size: 21px;
+                        line-height: 37px;
+                        @media screen and(max-width: 425px){
+                            font-size: 20px;
+                            line-height: 35px;
+                        }
+                    }
+                }
+            }
+            p{
+                text-align: start;
+                font-size: 16px;
+                line-height: 29px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

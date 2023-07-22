@@ -1,0 +1,408 @@
+#home{
+    //+
+    min-height: 200vh;
+    max-height: 5000vh;
+    @include Flex(column, "", center);
+    margin-top: 21vh;
+    @media screen and(max-width: 1024px){
+        margin-top: 40vh;
+        @media screen and(max-width: 768px){
+            margin-top: 190px;
+            @media screen and(max-width: 425px){
+                margin-top: 90px;
+            }
+        }
+    }
+    .image-slider{
+        width: 100%;
+        cursor: grab;
+        div{
+            background-size: cover !important;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    //+
+    .welcome{
+        width: 100%;
+        background-image: url("../images/home-background.jpeg");
+        background-position: center;
+        background-size: cover;
+        .welcome-background{
+            height: 100%;
+            @include Flex(column, "", center);
+            background-color: $home-bgcolor;
+            color: $textWhite;
+            text-align: center;
+            padding: 85px 0px 100px 0px;
+            h1{
+                @include h1();
+                width: 86%;
+                margin-bottom: 45px;
+            }
+            p{
+                @include p();
+                font-size: 19px;
+                width: 86%;
+                margin-bottom: 25px;
+            }
+            a{
+                @include Text("", 18px, $font-vinyl);
+                margin-top: 10px;
+                @include button(25px, 35px, 40px, 18px);
+                &:hover{
+                    background-color: rgba(204, 40, 51, 0.8);
+                }
+            }
+        }
+    }
+    //?
+    .slow-roast-bowls{
+        @include Flex(column, "", center);
+        background-color: white;
+        .slow-bg{
+            padding: 40px 0px;
+            width: 86%;
+            @include Flex(column, "", center);
+            h1{
+                @include h1();
+                color: $h1-color;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            p{
+                @include h4();
+                font-weight: 400;
+                color: $textBlack;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .roast-bowls{
+                @include Flex("", space-around, center);
+                width: 100%;
+                @media screen and(max-width: 425px){
+                    flex-direction: column;
+                }
+                
+                div{
+                    width: 100%;
+                    @include Flex(column, center, center);
+                    @media screen and(max-width: 1024px){
+                        width: 30%;
+                        @media screen and(max-width: 425px){
+                            width: 100%;
+                        }
+                    }
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        img{
+                            width: 85%;
+                            margin-bottom: 20px;
+                            @media screen and(max-width: 425px){
+                                width: 100%;
+                            }
+                        }
+                    }
+                    h4{
+                        @include Text(100, 25px, $font-vinyl);
+                        color: $h1-color;
+                        margin-bottom: 20px;
+                        letter-spacing: -1px;
+                        @media screen and(max-width: 1024px){
+                            font-size: 23px;
+                            text-align: center;
+                            @media screen and(max-width: 768px){
+                                font-size: 22px;
+                                @media screen and(max-width: 425px){
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    p{
+                        @include p();
+                        color: $textBlack;
+                        @media screen and(max-width: 1024px){
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .allergies{
+                border-top: 2px solid #cc2833;
+                border-bottom: 2px solid #cc2833;
+                width: 100%;
+                padding: 40px 0px;
+                .title{
+                    font-size: 24px;
+                    line-height: 44px;
+                    @media screen and(max-width: 1024px){
+                        font-size: 22px;
+                        line-height: 40px;
+                        @media screen and(max-width: 768px){
+                            font-size: 21px;
+                            line-height: 37px;
+                            @media screen and(max-width: 425px){
+                                font-size: 20px;
+                                line-height: 35px;
+                            }
+                        }
+                    }
+                }
+                p{
+                    text-align: start;
+                    font-size: 16px;
+                    line-height: 29px;
+                    margin-bottom: 15px;
+                }
+            }
+            .roast-buttons{
+                @include Flex(column, "", "");
+                padding: 30px 0px;
+                a:first-child{
+                    margin-bottom: 35px;
+                }
+                a{
+                    &:hover{
+                        background-color: rgba(204, 40, 51, 0.8);
+                    }
+                    @include button(20px, 25px, 40px, 18px);
+                    font-family: $font-vinyl;
+                    text-align: center;
+                    @media screen and(max-width: 1024px){
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    //?
+    .home-mission{
+        position: relative;
+        width: 100%;
+        background-color: $bg-color;
+        @include Flex("", end, "");
+        @media screen and(max-width: 425px){
+            flex-direction: column-reverse;
+            @media screen and(max-width: 375px){
+                align-items: start;
+            }
+        }
+        .mission-text{
+            position: absolute;
+            left: 70px;
+            top: 160px;
+            @media screen and(max-width: 1024px){
+                top: 110px;
+                @media screen and(max-width: 425px){
+                    position: relative;
+                    top: -50px;
+                    left: 0px;
+                    padding-left: 30px;
+                    @media screen and(max-width: 375px){
+                        top: -60px;
+                        @media screen and(max-width: 320px){
+                            top: -70px;
+                            padding-left: 25px;
+                        }
+                    }
+                }
+            }
+            p{
+                @include h1();
+                line-height: 68px;
+                color: $textBlack;
+                background-color: $bg-color;
+                margin-bottom: 10px;
+                @media screen and(max-width: 1024px){
+                    line-height: 57px;
+                    @media screen and(max-width: 768px){
+                        line-height: 49px;
+                        @media screen and(max-width: 425px){
+                            line-height: 43px;
+                        }
+                    }
+                }
+            }
+            .second{width: 91%;}
+            .third{
+                width: 50%;
+                @media screen and(max-width: 1024px){
+                    width: 30%;
+                }
+            }
+            a{
+                @include Text(400, 19px, $font-branton);
+                color: $textBlack;
+                @media screen and(max-width: 1024px){
+                    font-size: 18px;
+                    @media screen and(max-width: 425px){
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        .mission-image{
+            @include Flex("", end, center);
+            padding: 90px;
+            @media screen and(max-width: 1024px){
+                padding: 60px;
+                @media screen and(max-width: 425px){
+                    padding: 30px;
+                }
+            }
+            img{
+                width:75%;
+                @media screen and(max-width: 1024px){
+                    width: 65%;
+                    @media screen and(max-width: 425px){
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .home-our-friends{
+        background-image: url("../images/home.jpg");
+        background-position: center;
+        background-size: cover;
+        .home-background{
+            background-color:rgba(54,66,84, 0.8);
+            padding: 100px 0px;
+            @media screen and(max-width: 1024px){
+                padding: 65px 0px;
+                @media screen and(max-width: 768px){
+                    padding: 50px 0px;
+                }
+            }
+            div{
+                @include Flex(column, "", center);
+                text-align: center;
+            }
+            h1{
+                @include h1();
+                color: $textWhite;
+                width: 86%;
+                margin-bottom: 40px;
+            }
+            p{
+                @include Text(400, 19px, $font-branton);
+                color: $textWhite;
+                width: 86%;
+                margin-bottom: 25px;
+                @media screen and(max-width: 1024px){
+                    font-size: 18px;
+                    @media screen and(max-width: 425px){
+                        font-size: 17px;
+                    }
+                }
+            }
+            small{
+                @include Text(400, 16px, $font-branton);
+                color: $textWhite;
+                width: 72%;
+                margin-top: 60px;
+                line-height: 29px;
+                @media screen and(max-width: 1024px){
+                    margin-top: 45px;
+                    @media screen and(max-width: 425px){
+                        width: 90%;
+                    }
+                }
+            }
+            .our-approach h1{
+                margin-top: 110px;
+                @media screen and(max-width: 1024px){
+                    margin-top: 100px;
+                }
+            }
+        }
+    }
+    .followthe-journey{
+        text-align: center;
+        padding: 40px 0px 60px 0px;
+        background-color: $bg-color;
+        @include Flex(column, "", center);
+        a{
+            color: $h1-color;
+            @include Text(400, 36px, $font-vinyl);
+            margin-bottom: 40px;
+            width: 86%;
+            letter-spacing: -1px;
+            @media screen and(max-width: 1024px){
+                font-size: 31px;
+                @media screen and(max-width: 768px){
+                    font-size: 27px;
+                    @media screen and(max-width: 425px){
+                        font-size: 24px;
+                    }
+                }
+            }
+
+        }
+        .follow-images{
+            @include Flex("", "", "");
+            width: 86%;
+            @media screen and(max-width: 425px){
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 95%;
+            }
+            div{
+                width: 100%;
+                margin: 0px 10px;
+                cursor: pointer;
+                @media screen and(max-width: 1024px){
+                    margin: 0px 5px;
+                    @media screen and(max-width: 425px){
+                        width: 48%;
+                        margin: 0px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .image{
+                    width: 100%;
+                    img{width: 100%;}
+                }
+                .modal-image{
+                    display: none;
+                }
+                .close{
+                    position: absolute;
+                    top: 0px;
+                    right: 20px;
+                    font-size: 40px;
+                    color: $bg-color;
+                }    
+                .modal-image-active{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                    z-index: 3;
+                    left: 0;
+                    top: -0px;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    margin: 0px;
+                    img{
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 48%;
+                        @media screen and(max-width: 1024px){
+                            width: 55%;
+                            @media screen and(max-width: 768px){
+                                width: 73%;
+                                @media screen and(max-width: 425px){
+                                    width: 95%;
+                                }
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}

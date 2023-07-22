@@ -1,0 +1,105 @@
+//Header
+@mixin NavLink($size){
+    color: #364254;
+    text-decoration: none;
+    font-size: $size;
+}
+@mixin button($upDown, $rightLeft, $radius, $size){
+    color: white;
+    background-color: #cc2833;
+    padding: $upDown $rightLeft;
+    border-radius: $radius;
+    text-decoration: none;
+    font-size: $size;
+}
+@mixin Flex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+//Footer
+@mixin Links(){
+    color: rgba(204, 40, 51, 1);
+    padding: 3px 0px;
+    font-size: 15px;
+}
+@mixin Text($weight, $size, $family){
+    font-weight: $weight;
+    font-size: $size;
+    font-family: $family;
+}
+//Footer
+@mixin Input($width, $height){
+    width: $width;
+    height: $height;
+    border: 1px solid #9399a2;
+}
+@mixin h1(){
+    @include Text(400, 46px, $font-vinyl);
+    letter-spacing: -1px;
+    @media screen and(max-width: 1024px){
+        font-size: 38px;
+        @media screen and(max-width: 768px){
+            font-size: 33px;
+            @media screen and(max-width: 425px){
+                font-size: 29px;
+            }
+        }
+    }
+}
+@mixin h2(){
+    @include Text(400, 36px, $font-vinyl);
+    color: $h1-color;
+    letter-spacing: -1px;
+    @media screen and(max-width: 1024px){
+        font-size: 31px;
+        @media screen and(max-width: 768px){
+            font-size: 27px;
+            @media screen and(max-width: 425px){
+                font-size: 24px;
+            }
+        }
+    }
+}
+@mixin p(){
+    @include Text(400, 19px, $font-branton);
+    line-height: 35px;
+    @media screen and(max-width: 1024px){
+        font-size: 18px;
+        line-height: 33px;
+        @media screen and(max-width: 425px){
+            font-size: 17px;
+            line-height: 31px;
+        }
+    }
+}
+@mixin h3(){
+    @include Text(400, 26px, $font-vinyl);
+    letter-spacing: -1px;
+    @media screen and(max-width: 1024px){
+        font-size: 23px;
+        @media screen and(max-width: 768px){
+            font-size: 22px;
+            @media screen and(max-width: 425px){
+                font-size: 20px;
+            }
+        }
+    }
+}
+@mixin h4(){
+    @include Text(700, 24px, $font-branton);
+    line-height: 44px;
+    @media screen and(max-width: 1024px){
+        font-size: 22px;
+        line-height: 40px;
+        @media screen and(max-width: 768px){
+            font-size: 21px;
+            line-height: 37px;
+            @media screen and(max-width: 425px){
+                font-size: 20px;
+                line-height: 35px;
+            }
+        }
+    }
+}

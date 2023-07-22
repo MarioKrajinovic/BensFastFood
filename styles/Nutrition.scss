@@ -1,0 +1,136 @@
+@keyframes bottom-line1 {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 95%;
+        @media screen and(max-width: 1024px){
+            width: 100%;
+        }
+        
+    }
+}
+@keyframes bottom-line2 {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 60%;
+        @media screen and(max-width: 1024px){
+            width: 69%;
+            @media screen and(max-width: 768px){
+                width: 88%;
+                @media screen and(max-width: 425px){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@keyframes bottom-line3 {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 32%;
+        @media screen and(max-width: 1024px){
+            width: 37%;
+            @media screen and(max-width: 768px){
+                width: 47%;
+                @media screen and(max-width: 425px){
+                    width: 75%;
+                    @media screen and(max-width: 375px){
+                        width: 81%;
+                        @media screen and(max-width: 320px){
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#nutrition{
+    @extend #home;
+    color: $textBlack;
+    padding: 80px 0px 0px 0px;
+    @media screen and(max-width: 425px){
+        padding: 40px 0px 0px 0px;
+    }
+    div{
+        width: 84%;
+        margin-bottom: 30vh;
+        @media screen and(max-width: 425px){
+           width: 90%;
+           margin-bottom: 12vh;
+        }
+    }
+    img{
+        width: 100%;
+        margin-top: 30px
+    }
+    h1{
+        @include h2();
+        margin-bottom: 40px;
+    }
+    p{
+        @include p();
+        margin-bottom: 30px;
+        a{color: $textBlack;}
+    }
+    h3{
+        @include h3();
+    }
+    hr{
+        margin-bottom: 30px; 
+        border-radius: 20px;
+    }
+    .bottom-line1{
+        width: 95%;
+        animation: bottom-line1 1s ease-in-out;
+        border: 2px solid $h1-color; 
+        @media screen and(max-width: 1024px){
+            width: 100%;
+        }
+    }
+    .bottom-line2{
+        width: 60%;
+        animation: bottom-line2 1s ease-in-out;
+        border: 2px solid $h1-color; 
+        @media screen and(max-width: 1024px){
+            width: 69%;
+            @media screen and(max-width: 768px){
+                width: 88%;
+                @media screen and(max-width: 425px){
+                    width: 70%;
+                }
+            }
+        }
+    }
+    .bottom-line3{
+        width: 32%;
+        animation: bottom-line3 1s ease-in-out;
+        border: 2px solid $h1-color; 
+        @media screen and(max-width: 1024px){
+            width: 37%;
+            @media screen and(max-width: 768px){
+                width: 47%;
+                @media screen and(max-width: 425px){
+                    width: 75%;
+                    @media screen and(max-width: 375px){
+                        width: 81%;
+                        @media screen and(max-width: 320px){
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .alergy-image{
+        margin-top: 10vh;
+        @media screen and(max-width: 425px){
+            margin-top: 5vh;
+        }
+    }
+}

@@ -1,0 +1,275 @@
+#catering{
+    min-height: 100vh;
+    color: $textBlack;
+    background-image: url("../images/catering.jpg");
+    background-repeat: no-repeat;
+    .catering-bg{
+        padding-top: 35vh;
+        padding-bottom: 20vh;
+        border-bottom: 6px solid $h1-color;
+        background-color: rgba(231, 230, 230, 0.9);
+        @include Flex(column, "", center);
+        @media screen and(max-width: 1024px){
+            padding-top: 50vh;
+            @media screen and(max-width: 425px){
+                padding-top: 18vh;
+            }
+        }
+        h1{
+            @include h1();
+            width: 40%;
+            text-align: center;
+            margin-bottom: 40px;
+            color: $h1-color;
+            @media screen and(max-width: 425px){
+                width: 90%;
+            }
+        }
+        ol{
+            @include Flex(column, "", center);
+            width: 40%;
+            @media screen and(max-width: 768px){
+                width: 45%;
+                @media screen and(max-width: 425px){
+                    width: 90%;
+                }
+            }
+        }
+        li{
+            @include Text(700, 24px, $font-branton);
+            width: 70%;
+            margin-bottom: 20px;
+            @media screen and(max-width: 1024px){
+                font-size: 22px;
+                @media screen and(max-width: 768px){
+                    font-size: 21px;
+                    @media screen and(max-width: 425px){
+                        font-size: 20px;
+                    }
+                }
+            }
+            a{
+                color: $h1-color;
+                &:hover{
+                    color: rgba(204, 40, 51, 0.8);
+                }
+            }
+        }
+        .link{
+            @include button(23px, 85px, 40px, 16px);
+            font-weight: 700;
+            font-family: $font-vinyl;
+            @include Flex("", center, "");
+            margin: 50px 0px 120px 0px;
+            &:hover{
+                background-color: rgba(204, 40, 51, 0.8);
+            }
+            @media screen and(max-width: 1024px){
+                font-size: 14px;
+                padding: 23px 90px;
+                @media screen and(max-width: 425px){
+                    padding: 25px 65px;
+                }
+            }
+        }
+        .marquee{cursor: pointer;position: relative;}
+        h4{
+            @include h4();
+            font-family: $font-vinyl;
+            font-weight: 400;
+            color: $h1-color;
+        }
+    }
+    /* .background-image{
+        .section-divider-svg-stroke{
+            z-index: 0;
+            position: absolute;
+            top: -41%;
+            left: 0%;
+            stroke: $h1-color;
+            stroke-width: 6px;
+        }
+        .section-divider-svg-stroke1{
+            z-index: 0;
+            position: absolute;
+            top: 79.5%;
+            left: 0%;
+            stroke: $h1-color;
+            stroke-width: 6px;
+        }
+        .section-divider-svg-stroke2{
+            z-index: 0;
+            position: absolute;
+            top: 255.4%;
+            left: 0%;
+        }
+        .section-divider-svg-stroke3{
+            z-index: 0;
+            position: absolute;
+            top: 365.4%;
+            left: 0%;
+        }
+    } */
+    .catering-team{
+        min-height: 100vh;
+        background-color: $bg-color;
+        @include Flex(column, "", center);
+        padding: 15vh 0px 10vh 0px;
+        border-bottom: 6px solid $h1-color;
+        h1{
+            @include h1();
+            margin-bottom: 40px;
+            width: 84%;
+            text-align: left;
+        }
+        ul{width: 75%;}
+        li{
+            @include Text(400, 24px, $font-branton);
+            margin-bottom: 20px;
+            @media screen and(max-width: 1024px){
+                font-size: 22px;
+                @media screen and(max-width: 768px){
+                    font-size: 21px;
+                    @media screen and(max-width: 425px){
+                        font-size: 20px;
+                    }
+                }
+            }
+            a{color: $textBlack;}
+        }
+    }
+    .catering-faqs{
+        background-color: $textBlack;
+        color: $textWhite;
+        padding: 15vh 0px 10vh 0px;
+        @include Flex(column, "", center);
+        h1{
+            @include h1();
+            margin-bottom: 40px;
+            width: 84%;
+            @media screen and(max-width: 425px){
+                width: 90%;
+                margin-bottom: 60px;
+            }            
+        }
+        .faqs{
+            width: 84%;
+            @media screen and(max-width: 425px){
+                width: 90%;
+            }
+            .info{
+                margin-bottom: 30px;
+                border-bottom: 1px solid $bg-color;
+                width: 95%;
+                @media screen and(max-width: 425px){
+                    width: 100%;
+                }
+                .question{
+                    cursor: pointer;
+                    @include Flex("", "", "");
+                    .arrow{
+                        @include Flex("", "", center);
+                        img{width: 25px; height: 25px; transition: 0.2s;}
+                        margin-right: 10px;
+                    }
+                    .change{
+                        transition: 0.2s;
+                        rotate: (180deg);
+                    }
+                    h2{@include h3();}
+                }
+                p{@include p();}
+                .answer{ 
+                    visibility: hidden;
+                    transition: 0.3s;
+                    height: 0px;
+                    padding: 0px 0px 35px 80px;
+                    p{visibility: hidden; transition: 0s;}
+                    @media screen and(max-width: 425px){
+                        padding: 0px 0px 35px 35px;                        
+                    }
+
+                }
+                .show-answer{
+                    transition: 0.3s;
+                    padding: 40px 0px 25px 80px;
+                    @media screen and(max-width: 425px){
+                        padding: 30px 0px 30px 35px;                        
+                    }
+                }
+            }
+        }
+    }
+    .more-questions{
+        @include Flex(column, "", center);
+        padding: 15vh 0px 10vh 0px;
+        border-bottom: 6px solid $h1-color;
+        h1{
+            @include h2();
+            color: $textBlack;
+            margin: 3px 0px;
+        }
+        form{
+            width: 34%;
+            @media screen and(max-width: 425px){
+                width: 86%;
+            }
+            p{
+                @include p();
+                margin: 10px 0px 15px 0px;
+            }
+            small{
+                @include Text(400, 16px, $font-branton);
+                margin-left: 5px;
+            }
+            label{
+                @include Text(400, 16px, $font-branton);
+                margin-bottom: 8px;
+            }
+            input{
+                margin-bottom: 30px;
+            }
+            .name-form{
+                @include Flex("", space-between, "");
+                div{
+                    @include Flex(column, "", "");
+                    width: 49%;
+                    input{
+                        @include Input(100%, 47px);
+                        background-color: white;
+                        @media screen and(max-width: 425px){
+                            height: 43px;
+                        }
+                    }
+                }
+            }
+            .email, .subject, .message{
+                @include Flex(column, "", "");
+                input{
+                    @include Input(100%, 47px);
+                    background-color: white;
+                    @media screen and(max-width: 425px){
+                        height: 40px;
+                    }
+                }
+            }
+            .message{
+                textarea{
+                    height: 100px;
+                }
+            }
+            button{
+                @include button(20px, 30px, 30px, 16px);
+                border: none;
+                font-family: $font-vinyl;
+                margin-top: 20px;
+                &:hover{
+                    background-color: rgba(204, 40, 51, 0.8);
+                }
+                @media screen and(max-width: 768px){
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

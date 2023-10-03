@@ -1825,14 +1825,13 @@ footer .footer-info .signature {
   padding: 60px;
   color: #364254;
   z-index: 1;
-  height: 110vh;
+  height: auto;
 }
 @media screen and (max-width: 1024px) {
   #mission .mission .mission-text {
     left: 90px;
     top: 270px;
     padding: 40px;
-    height: 125vh;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 768px) {
@@ -1840,7 +1839,6 @@ footer .footer-info .signature {
     position: relative;
     top: -100px;
     left: -20px;
-    height: auto;
     width: 80%;
   }
 }

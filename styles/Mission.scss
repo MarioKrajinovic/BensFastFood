@@ -27,17 +27,15 @@
             padding: 60px;
             color: $textBlack;
             z-index: 1;
-            height: 110vh;
+            height: auto;
             @media screen and(max-width: 1024px){
                 left: 90px;
                 top: 270px;
                 padding: 40px;
-                height: 125vh;
                 @media screen and(max-width: 768px){
                     position: relative;
                     top: -100px;
                     left: -20px;
-                    height: auto;
                     width: 80%;
                     @media screen and(max-width: 425px){
                         padding: 25px;

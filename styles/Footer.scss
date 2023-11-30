@@ -1,9 +1,5 @@
 footer{
-    height: 79vh;
     background-color: $bg-color;
-    @media screen and(max-width: 1024px){
-        height: auto;
-    }
     .join-to-family{
         background-image: url("./images/footer.jpg");
         background-position: center;
